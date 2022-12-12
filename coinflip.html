@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+    <meta name="description" content="RustyPot.com | The first rust jackpot site." property="og:description" />
+    <meta name="keywords"
+        content="RustyPot, RustyPot.com, Rust jackpot, Rust, rust skins, rust gambling, rust betting, jackpot, pot, rusty, rust steam game, rust betting website" />
+    <title>RustyPot.com | Coinflip</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Khand:500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/libs/toastr.min.css">
+    <link rel="stylesheet" href="/css/mainV17.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default" style="border-radius:0px;border:0px;border-bottom: 3px solid #a43636;">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="/" style="padding:0px;"><img
+                        src="/img/logo.png" height="50px" alt=""></a>
+            </div>
+
+
+            <div class="collapse navbar-collapse navbar-vertical-align" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-social hidden-xs hidden-sm hidden-md"
+                    style="color:#FFF!important;text-align:center;font-size:7px;">
+                    <li><a href="/FAQ">FAQ</a></li>
+                    <li><a href="/TOS">TOS</a></li>
+                    <li><a href="/ProvablyFair">PROVABLY FAIR</a></li>
+                    <li><a href="/Support">SUPPORT</a></li>
+                    <li><a href="" target="_blank"><i class="fa fa-twitter"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="" target="_blank"><i class="fa fa-steam"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="" target="_blank"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="" target="_blank"><img src="/img/discord.png"
+                                style="height:16px;width:16px;" alt=""></a></li>
+
+                </ul>
+
+                <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm"
+                    style="color:#FFF!important;text-align:center;">
+                    <li><a href="/">Jackpot </a></li>
+                    <li><a href="/coinflip">Coinflip</a></li>
+                    <li><a href="/FAQ">FAQ</a></li>
+                    <li><a href="/TOS">TOS</a></li>
+                    <li><a href="/ProvablyFair">PROVABLY FAIR</a></li>
+                    <li><a href="/Support">SUPPORT</a></li>
+                    <li>
+                        <a style="display:inline" href="https://discord.gg/by5bykp" target="_blank"><img
+                                src="/img/discord.png" style="height:16px;width:16px;" alt=""></a>
+                        <a style="display:inline" href="https://steamcommunity.com/groups/RustyPot" target="_blank"><i
+                                class="fa fa-steam" aria-hidden="true"></i></a>
+                        <a style="display:inline" href="https://www.instagram.com/rustypotofficial/" target="_blank"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a style="display:inline" href="https://twitter.com/RustyPot" target="_blank"><i
+                                class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="#">Online: <span class="Online_players">0</a></li>
+                </ul>
+
+                <ul id="navlock" class="nav navbar-nav hidden-xs font" style="font-size:20px;">
+                    <li><a href="/" style="font-size:20px">JACKPOT <span class="jpTotal redText">$0.00 </span></a></li>
+                    <li class="hidden-xs"><a href="/" style='padding:0px;'><img src="/img/logo.png" height="50px"
+                                alt=""></a></li>
+                    <li><a href="/coinflip" style="font-size:20px">COINFLIP <span class="cfTotal redText">$0.00
+                            </span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="text-align:center;">
+                    <!--<li><a href="/auth/steam"><i class="fa fa-steam" aria-hidden="true"></i> Sign in</a></li> -->
+
+
+
+                    <li><a href="#" data-toggle="modal" data-target="#loginNotice"><i class="fa fa-steam"
+                                aria-hidden="true"></i> Sign in</a></li>
+
+
+                </ul>
+                </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <style>
+        #navlock {
+            transform: translateX(-50%);
+            left: 50%;
+            position: absolute;
+            height: 100%;
+        }
+
+        #navlock li a {
+            padding: 8px 0px 0px 0px;
+        }
+
+        #navlock .jpTotal,
+        #navlock .cfTotal {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .navbar-social li a {
+            font-size: 14px;
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+
+        nav {
+            background-color: #191919 !important;
+            border-radius: 0px !important;
+        }
+
+        nav ul li a {
+            color: #FFF !important;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: grey !important;
+        }
+
+        nav .dropdown-menu {
+            background-color: #191919 !important;
+            color: #FFF !important;
+        }
+
+        nav .dropdown-menu li a:hover {
+            background-color: #191919 !important;
+            color: grey !important;
+        }
+    </style>
+
+    <section id="main">
+        <div style="width: 90% !important; margin-left: 5%;">
+            <div class="row">
+
+                <div class="col-lg-9" style="margin-bottom:100px;">
+                    <div class="panel panel-default antiPanel">
+                        <!-- create game/header -->
+                        <div class="coinflipStats">
+                            <div class="coinflipStatsHeader font">
+                                <span id="togglecf-history" data-toggle="tooltip" data-placement="top"
+                                    title="Toggles Coinflip History"><i class="fa fa-history"
+                                        aria-hidden="true"></i></span>
+                                <h4>Coinflip</h4>
+                            </div>
+                            <div class="coinflipStatsBody">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <p class="ActiveGamesTotal">$0.00</p>
+                                        <p>Total Amount</p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <p class="NumberActiveGames">0</p>
+                                        <p>Active games</p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+                                        <div class="createCoinflipButton font">
+                                            <a href="#" data-toggle="modal" data-target="#loginNotice">
+                                                <p style="font-size:20px;">LOGIN TO DEPOSIT</p>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div id="cfHistory">
+                                    <span id="cfHistoryText">Previous: </span>
+                                    <div id="cfHistoryCoins">
+                                        <!-- <img class="cfHistoryCoin" src="/img/cfBlack.png"> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="" style="background-color:#191919;border:2px solid #E0393A;">
+                <div id="cfHistory">
+                  <span id="cfHistoryText">Previous: </span>
+                  <div id="cfHistoryCoins">
+                  </div>
+                </div>
+              </div> -->
+
+                        <!--All the coin flip games-->
+                        <div class="ActiveCoinflips">
+
+                            <div class="coinflip" coinflip-id="6397079c0113d69bc6147de5">
+                                <div class="row">
+                                    <div class="coinflipCreatorInfo col-md-3 media">
+                                        <div class="media-left"><img
+                                                src="https://avatars.akamai.steamstatic.com/18da50889d2c6410bf345c4084017d9c7e4bb44d_full.jpg"
+                                                class="media-object"></div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Gim #RustyPot</h4>
+                                            <p>$0.38<span class="redText"> Doubled Down!</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="coinflipPick col-md-1"><img src="/img/cfBlack.png" alt=""></div>
+                                    <div class="col-md-4 coinflipGameItems"><img data-toggle="tooltip" title=""
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Je5GTHfCk4nReh8DEiv5daPK03qrA0Q_64iUe-2eI//50fx50f"
+                                            data-original-title="Snow Camo Bandana | $0.19"><img data-toggle="tooltip"
+                                            title=""
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Je5GTHfCk4nReh8DEiv5daPK03qrA0Q_64iUe-2eI//50fx50f"
+                                            data-original-title="Snow Camo Bandana | $0.19"></div>
+                                    <div class="col-md-2 coinflipStatus">
+                                        <p>Open</p>
+                                    </div>
+                                    <div class="col-md-2 coinflipActions">
+                                        <div class="join-info"><button class="btn">Join</button>
+                                        </div>
+                                        <div class="view"><button class="btn">View</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="coinflip" coinflip-id="6397079c0113d69bc6147de5">
+                                <div class="row">
+                                    <div class="coinflipCreatorInfo col-md-3 media">
+                                        <div class="media-left"><img
+                                                src="https://avatars.akamai.steamstatic.com/18da50889d2c6410bf345c4084017d9c7e4bb44d_full.jpg"
+                                                class="media-object"></div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Gim #RustyPot</h4>
+                                            <p>$0.38<span class="redText"> Doubled Down!</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="coinflipPick col-md-1"><img src="/img/cfBlack.png" alt=""></div>
+                                    <div class="col-md-4 coinflipGameItems"><img data-toggle="tooltip" title=""
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Je5GTHfCk4nReh8DEiv5daPK03qrA0Q_64iUe-2eI//50fx50f"
+                                            data-original-title="Snow Camo Bandana | $0.19"><img data-toggle="tooltip"
+                                            title=""
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Je5GTHfCk4nReh8DEiv5daPK03qrA0Q_64iUe-2eI//50fx50f"
+                                            data-original-title="Snow Camo Bandana | $0.19"></div>
+                                    <div class="col-md-2 coinflipStatus">
+                                        <p>Open</p>
+                                    </div>
+                                    <div class="col-md-2 coinflipActions">
+                                        <div class="join-info"><button class="btn">Join</button>
+                                        </div>
+                                        <div class="view"><button class="btn">View</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="coinflip" coinflip-id="6397079c0113d69bc6147de5">
+                                <div class="row">
+                                    <div class="coinflipCreatorInfo col-md-3 media">
+                                        <div class="media-left"><img
+                                                src="https://avatars.akamai.steamstatic.com/18da50889d2c6410bf345c4084017d9c7e4bb44d_full.jpg"
+                                                class="media-object"></div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Gim #RustyPot</h4>
+                                            <p>$0.38<span class="redText"> Doubled Down!</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="coinflipPick col-md-1"><img src="/img/cfBlack.png" alt=""></div>
+                                    <div class="col-md-4 coinflipGameItems"><img data-toggle="tooltip" title=""
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Je5GTHfCk4nReh8DEiv5daPK03qrA0Q_64iUe-2eI//50fx50f"
+                                            data-original-title="Snow Camo Bandana | $0.19"><img data-toggle="tooltip"
+                                            title=""
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Je5GTHfCk4nReh8DEiv5daPK03qrA0Q_64iUe-2eI//50fx50f"
+                                            data-original-title="Snow Camo Bandana | $0.19"></div>
+                                    <div class="col-md-2 coinflipStatus">
+                                        <p>Open</p>
+                                    </div>
+                                    <div class="col-md-2 coinflipActions">
+                                        <div class="join-info"><button class="btn">Join</button>
+                                        </div>
+                                        <div class="view"><button class="btn">View</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="coinflip" coinflip-id="6397079c0113d69bc6147de5">
+                                <div class="row">
+                                    <div class="coinflipCreatorInfo col-md-3 media">
+                                        <div class="media-left"><img
+                                                src="https://avatars.akamai.steamstatic.com/18da50889d2c6410bf345c4084017d9c7e4bb44d_full.jpg"
+                                                class="media-object"></div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Gim #RustyPot</h4>
+                                            <p>$0.38<span class="redText"> Doubled Down!</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="coinflipPick col-md-1"><img src="/img/cfBlack.png" alt=""></div>
+                                    <div class="col-md-4 coinflipGameItems"><img data-toggle="tooltip" title=""
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Je5GTHfCk4nReh8DEiv5daPK03qrA0Q_64iUe-2eI//50fx50f"
+                                            data-original-title="Snow Camo Bandana | $0.19"><img data-toggle="tooltip"
+                                            title=""
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Je5GTHfCk4nReh8DEiv5daPK03qrA0Q_64iUe-2eI//50fx50f"
+                                            data-original-title="Snow Camo Bandana | $0.19"></div>
+                                    <div class="col-md-2 coinflipStatus">
+                                        <p>Open</p>
+                                    </div>
+                                    <div class="col-md-2 coinflipActions">
+                                        <div class="join-info"><button class="btn">Join</button>
+                                        </div>
+                                        <div class="view"><button class="btn">View</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- active confoips -->
+
+                        <div class="EndedCoinFlips">
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Chat and annocments -->
+                <div class="col-lg-3">
+                    <div class="panel panel-default rusty-panel font" id="FlashGiveaway">
+                        <div class="panel-heading rusty-panel-heading" style="font-size:18px;">
+                            <img src="/img/flashGiveawayIcon.png" style="height:30px;width:30px" /> Flash Giveaway <img
+                                src="/img/flashGiveawayIcon.png" style="height:30px;width:30px" />
+                        </div>
+                        <div class="panel-body rusty-panel-body">
+                            <div id="fgStartingSoon">
+                                <!--Winner info box-->
+                                <h2>Starting in <span id="fgStartingTimer">30</span> seconds...</h2>
+                                <p>Be sure to check out our <a class="goldText" href="https://twitter.com/RustyPot"
+                                        target="_blank">Twitter</a> for exclusive Giveaways!</p>
+                            </div>
+                            <!--Winner info box-->
+
+                            <div class="row" id="fgInfo">
+                                <!--Basic  buttons-->
+                                <div class="col-md-4 fgItems">
+                                    <div id="fgItem" data-toggle="tooltip" title="" data-original-title="null">
+                                        <img id="fgImage"
+                                            src="https://steamcommunity-a.akamaihd.net/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Ff5GLNfCk4nReh8DEiv5dbPK47pbcyR_m4DQ68Ofs/50fx50f">
+                                        <p id="fgPrice">$0.00</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-8">
+                                    <div class="fgPlayers">
+                                        Currently <span id="fgParticipants">0</span> participants
+                                    </div>
+                                    <!---->
+
+
+                                    <div>
+
+                                        <div class="fgButton font">
+                                            <a href="#" data-toggle="modal" data-target="#loginNotice">
+                                                <p style="font-size:20px;">Login to join!</p>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="fgTimer">
+                                        Ending in <span id="fgTimer">90</span> seconds...
+                                    </div>
+                                </div>
+                                <!---->
+
+                            </div>
+                            <!--End row basic buttons-->
+
+                            <div id="fgRollBox">
+                                <!--Roll box-->
+                                <img src="/img/Laser.png" id="rollX">
+                                <div id="fgRollImgs">
+
+                                </div>
+                            </div>
+                            <!--Roll box-->
+
+                            <div id="fgWinnerInfo">
+                                <!--Winner info box-->
+                                <h3>Winner</h3>
+                                <img id="fgWinnerImg"
+                                    src="https://avatars.akamai.steamstatic.com/18da50889d2c6410bf345c4084017d9c7e4bb44d_full.jpg" />
+                                <p id="fgWinnerName"></p>
+                            </div>
+                            <!--Winner info box-->
+
+                        </div>
+                    </div>
+
+
+                    <div class="panel panel-default rusty-panel">
+                        <div class="panel-heading rusty-panel-heading" style="font-size:18px;">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="Online_players">200</span>
+                            <span id="sounds-muted" data-toggle="tooltip" data-placement="top"
+                                title="Toggles Website Sounds" onclick="toggleSiteSounds()">
+                                <i class="fa fa-volume-off" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="panel-body rusty-panel-body">
+                            <ul id="chatArea">
+                                <li class="chatMessage">
+                                    <img src="./img/flashGiveawayIcon.png">
+                                    <b style="color:red"> [Admin]</b>
+                                    <a target="_blank" href="https://steamcommunity.com/profiles/"> Server <span
+                                            class="chatBreaker">:</span></a><span> Connecting...
+                                    </span>
+                                </li>
+
+                                <li class="chatMessage userReceived">
+                                    <img src="./img/jimmy/39.jpg">
+                                    <a target="_blank" href="https://steamcommunity.com/profiles/"> Server <span
+                                            class="chatBreaker">:</span></a>
+                                    <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                                        perferendis.</span>
+                                </li>
+
+                                <li class="chatMessage userSide">
+                                    <span>Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Aut, tempore?
+                                    </span>
+                                </li>
+
+                                <li class="chatMessage userReceived">
+
+                                    <img src="./img/jimmy/39.jpg">
+                                    <a target="_blank" href="https://steamcommunity.com/profiles/"> Server <span
+                                            class="chatBreaker">:</span></a><span> Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Ipsa, perferendis.
+
+                                    </span>
+                                </li>
+
+                                <li class="chatMessage userSide">
+                                    <span style="display:inline-block;">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Aut, tempore?</span>
+                                </li>
+                                <li class="chatMessage userSide">
+                                    <span style="display:inline-block;">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Aut, tempore?</span>
+                                </li>
+
+                                <li class="chatMessage userSide">
+                                    <span style="display:inline-block;">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Aut, tempore?</span>
+                                </li>
+                            </ul>
+                            <form class="form-group" style="margin-bottom:0px;" id="chatMessage">
+
+                                <input type="text" disabled class="form-control"
+                                    placeholder="You must be signed into chat" maxlength="150" autocomplete="off">
+
+                            </form>
+                        </div>
+                    </div>
+                    <!--chat-->
+
+
+                    <div class="panel panel-default rusty-panel" style="min-height:300px;">
+                        <div class="panel-heading rusty-panel-heading font">
+                            ANNOUNCEMENTS
+                        </div>
+                        <div class="panel-body rusty-panel-body" id="announcement">
+                            <div id="announcementContent" style="text-align:center; color: #fff;">
+                                <div style="font-size: 20px; text-align:center;">Add <span
+                                        style="color: #D4AF37">#RustyPot</span> to your Steam name to receive a up to a
+                                    5% <span style="color: #D4AF37">Win Bonus!</span></div>
+                                <a href="#" target="_blank">
+                                    <i id="AnnouncementLogo" class="fa fa-gift" aria-hidden="true"
+                                        style="font-size: 160px; color: #fff; cursor:pointer;"></i>
+                                </a>
+
+                                <div class="luckButton font"
+                                    style="font-size: 20px; background-color:#c94646; margin: auto; border-radius: 5px; width: 40%; padding: 10px;cursor:pointer;">
+                                    Press me for luck!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--announcement-->
+                </div>
+                <!-- end of row-->
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.2/socket.io.min.js"></script>
+    <script src="/js/libs/jquery.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/libs/toastr.min.js"></script>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="/js/rustypotV41.js"></script>
+    <script>
+        // enables all tooltips
+        $('[data-toggle="tooltip"]').tooltip();
+    </script>
+</body>
+
+</html>

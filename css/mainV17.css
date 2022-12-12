@@ -1,0 +1,1728 @@
+body {
+    background: url('/img/background.png') center no-repeat fixed #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Will need to be redone soon to remove it for all browsers */
+
+.modal-content {
+    border: 0 !important;
+}
+
+.font {
+    font-family: 'Khand', sans-serif;
+}
+
+.hover:hover {
+    cursor: pointer;
+}
+
+body .infoPanel {
+    background-color: #191919;
+    border: 2px solid #E0393A;
+}
+
+body .infoPanel h3 {
+    text-align: center;
+}
+
+body .infoPanel h2 {
+    text-align: center;
+}
+
+.depositInventory {
+    max-height: 500px;
+    overflow: auto;
+    padding-top: 30px;
+    /* center a div insie another div*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.depositInventory::-webkit-scrollbar {
+    display: none;
+}
+
+.InventoryItem {
+    background-color: #d3d3d3;
+    border: 1px solid #bdbdbd;
+    float: left;
+    position: relative;
+    height: 150px;
+    width: 150px;
+}
+
+.InventoryItem:hover {
+    cursor: pointer;
+}
+
+.InventoryItem img {
+    height: 128px;
+    width: 128px;
+    padding-left: 11px;
+}
+
+.ItemPrice {
+    text-align: center;
+}
+
+.inventory_input {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.checkmark {
+    background: url(/img/checkmark.png) no-repeat;
+    background-size: 65%;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    z-index: 2;
+}
+
+.itemSelected {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.jackpot_deposit {
+    border: 2px solid red;
+}
+
+.jackpot_item {
+    display: inline-block;
+}
+
+.antiPanel {
+    background-color: transparent;
+    border: 0;
+}
+
+@media screen and (max-width: 450px) {
+    #jackpotItems {
+        font-size: 18px !important;
+    }
+
+    #roundTotal {
+        font-size: 18px !important;
+    }
+}
+
+#jackpotTimer {
+    position: absolute;
+    top: 33%;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 50px;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+#roundTotal {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 27px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#jackpotItems {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 27px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#jackpotBackground {
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background-color: #191919 !important;
+    border-radius: 5px;
+    border: 4px solid #a43636 !important;
+}
+
+#jackpot div {
+    max-width: 666px;
+}
+
+#jackpotPlay {
+    padding: 10px !important;
+    background-color: #c94646 !important;
+    border: 4px solid #a43636 !important;
+    border-radius: 5px;
+    font-size: 25px !important;
+    outline: 0px;
+    cursor: pointer;
+}
+
+#progress {
+    background-image: url("/img/center.png");
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    background-position: center;
+    background-color: #f5f5f500;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+}
+
+#progress>svg {
+    height: 100%;
+    display: block;
+}
+
+#depositPanel {
+    background-color: transparent;
+    border: 0px;
+    margin-top: 20px;
+}
+
+#depositPanel a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rusty-panel {
+    border: 2px solid #c94646 !important;
+    background-color: #c94646;
+}
+
+.rusty-panel-heading {
+    background-color: #c94646 !important;
+    border: 0px !important;
+    color: #fff !important;
+    text-align: center;
+    font-size: 15px;
+}
+
+.rusty-panel-body {
+    background-color: #191919 !important;
+}
+
+#biggestWinner-img {
+    height: 100px;
+    width: 100px;
+}
+
+#biggestWinner-body p {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.redText {
+    color: #c94646 !important;
+}
+
+.greenText {
+    color: #009900 !important;
+}
+
+.goldText {
+    color: #D4AF37 !important;
+}
+
+.historyProfilePic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #c94646;
+    margin-right: 10px;
+}
+
+.gameHistory {
+    border: 1px solid #c94646;
+    padding: 10px 14px 10px 14px;
+    width: 100%;
+    line-height: 18px;
+    display: block;
+    font-size: .8vw;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+@media screen and (max-width: 1600px) {
+    .gameHistory {
+        font-size: .8vw;
+        /*background-color:red !important;*/
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .gameHistory {
+        font-size: 12px;
+        ;
+        /*background-color:green !important;*/
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .gameHistory {
+        font-size: 15px;
+        /*background-color:red !important;*/
+    }
+}
+
+.gameHistory div {
+    display: inline;
+}
+
+.gameHistory p {
+    margin-bottom: 0px;
+}
+
+.gameHistoryInfo {
+    position: absolute;
+}
+
+#currentJackpotHash a p {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1600px) {
+    #currentJackpotHash a p {
+        font-size: 12px;
+        /*background-color:red !important;*/
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #currentJackpotHash a p {
+        font-size: 2.2vw;
+        /*background-color:green !important;*/
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    #currentJackpotHash a p {
+        font-size: 15px;
+        /*background-color:red !important;*/
+    }
+}
+
+#chatArea {
+    height: 330px;
+    padding-left: 0;
+    padding-right: 0;
+    list-style-type: none;
+    word-wrap: break-word;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    font-size: 15px;
+}
+
+.chatMessage {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.chatMessage.userReceived {
+    background-color: rgb(65, 69, 70);
+    border: 2px solid #c94646;
+    border-radius: 0px 20px 0 20px;
+}
+
+.chatMessage.userSide {
+    background-color: rgb(65, 69, 70);
+    border: 2px solid #c94646;
+    position: relative;
+    left: 20%;
+    border-radius: 20px 0 20px 0px;
+}
+
+.chatMessage img {
+    border-radius: 3px;
+    height: 25px;
+    width: 25px;
+}
+
+.chatMessage a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.chatBreaker {
+    font-weight: normal;
+}
+
+#currentJackpot {
+    background-color: #c94646;
+    border: 4px solid #a43636 !important;
+}
+
+#currentJackpot h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.jackpotDeposit {
+    /* border:1px solid red; */
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.jackpotDepositHeader a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.jackpotDepositHeader img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline;
+    margin-right: 5px;
+}
+
+.jackpotDepositHeader p {
+    display: inline;
+}
+
+.jackpotDepositItem {
+    color: #fff;
+    border: 2px solid #333333;
+    background-color: #404040;
+    font-weight: bold;
+    width: 65px;
+    height: 84px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2px;
+}
+
+/**/
+
+.jackpotHistoryDeposit {
+    border: 1px solid red;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.jackpotHistoryDepositHeader a {
+    text-decoration: none;
+    color: #000;
+}
+
+.jackpotHistoryDepositHeader img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline;
+    margin-right: 5px;
+}
+
+.jackpotHistoryDepositHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.jackpotHistoryDepositHeader p {
+    display: inline;
+    text-align: center;
+    margin: 0px;
+    margin-right: 5px;
+}
+
+.jackpotHistoryDepositItems {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-align: center;
+}
+
+.jackpotHistoryDepositItem {
+    color: #c94646;
+    background-color: #fff;
+    width: 65px;
+    height: 82px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2px;
+}
+
+.jackpotHistoryWinner {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-align: center;
+}
+
+.jackpotHistoryWinner img {
+    display: inline;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #c94646;
+    margin-right: 10px;
+}
+
+.jackpotHistoryWinner p {
+    display: inline;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+.jackpotHistoryGameInfo p {
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+.acceptTradeButton {
+    background-color: #c94646;
+    border-bottom: 1px solid #a43636;
+    text-decoration: none;
+    color: #fff;
+}
+
+/*ROLL IMG */
+
+#rollPanel {
+    background-color: #191919;
+    max-width: 666px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px solid #c94646;
+}
+
+#roll-Imgs {
+    overflow: visible;
+    width: 16000px !important;
+    position: relative;
+    float: left;
+    right: 15px;
+    -webkit-transition: right 6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: right 6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /*transition: right 10s cubic-bezier(.4,.60,.6,1);*/
+    height: 64px;
+    white-space: nowrap;
+    font-size: 0px;
+}
+
+#roll-Imgs img {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 1px solid grey;
+}
+
+#rollX {
+    /*position:fixed;
+	right:50%;
+	z-index:10;*/
+    position: absolute;
+    -moz-position: absolute;
+    -webkit-position: absolute;
+    -ms-position: absolute;
+    z-index: 10;
+    left: 50%;
+    /*bottom:210px;*/
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+
+#jpWinnerInfo:hover {
+    cursor: pointer;
+}
+
+#jpWinnerInfo img {
+    margin: 0px;
+    display: inline;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border: 3px solid #c94646;
+    margin-right: 10px;
+}
+
+#jpWinnerInfo p,
+#jpMessage p {
+    margin: 0px;
+    display: inline;
+    font-size: 18px;
+}
+
+#jpWinnerInfo {
+    text-align: center;
+}
+
+/*LOADER*/
+
+.spinner {
+    margin: 0 auto 0;
+    width: 70px;
+    text-align: center;
+}
+
+.spinner>div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+.coinflipStats {
+    border: 2px solid #c94646 !important;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #c94646 !important;
+}
+
+.coinflipStatsHeader {
+    position: relative;
+    background-color: #c94646 !important;
+    height: 100%;
+}
+
+.coinflipStatsHeader h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+.coinflipStatsBody {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #191919 !important;
+}
+
+.createCoinflipButton {
+    text-align: center;
+    background-color: #c94646;
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+    margin-top: 5px;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.createCoinflipButton a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.createCoinflipButton:hover {
+    cursor: pointer;
+}
+
+.coinflipStatsBody p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*#191919!important;*/
+
+.coinflip {
+    background-color: #191919;
+    border: 2px solid #E0393A;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.coinflipCreatorInfo img {
+    border: 2px solid #c94646;
+    border-radius: 50%;
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+}
+
+.coinflipCreatorInfo p {
+    color: #00b300;
+    font-size: 17px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.coinflipCreatorInfo h4 {
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+.coinflipPick {
+    text-align: center;
+    align-items: center;
+}
+
+.coinflipPick img {
+    height: 50px;
+    width: 50px;
+}
+
+.coinflipGameItems {
+    text-align: center;
+    /* align: center; */
+}
+
+.coinflipGameItems p {
+    display: inline-block;
+}
+
+.coinflipStatus p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 15px;
+}
+
+.coinflipActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.coinflipActions .view button {
+    /*margin-top:5px;*/
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    background-color: #c94646;
+    text-align: center;
+    width: 55px;
+}
+
+.coinflipActions .join-info .result {
+    height: 50px;
+    width: 50px;
+}
+
+.coinflipActions .join-info .winner {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #c94646;
+    border-radius: 50%;
+}
+
+.coinflipActions .join-info .opponent {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #c94646;
+    border-radius: 50%;
+}
+
+.coinflipActions .join-info button {
+    text-align: center;
+    /*margin-top:5px;*/
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    background-color: #009900;
+}
+
+/*COINFLIP MODULE SHIT*/
+
+.coinflipHeader .creator .creator-imgs .profile {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.coinflipHeader .creator .creator-imgs {
+    position: relative;
+}
+
+.coinflipHeader .creator .creator-imgs .pick {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+}
+
+.coinflipHeader .opponent .opponent-imgs .profile {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.coinflipHeader .opponent .opponent-imgs {
+    position: relative;
+}
+
+.coinflipHeader .opponent .opponent-imgs .pick {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+}
+
+.coinflipHeader .opponent .opponent-name,
+.coinflipHeader .creator .creator-name {
+    text-align: center;
+    font-size: 15px;
+}
+
+.coinflipHeader .opponent .opponent-name a,
+.coinflipHeader .creator .creator-name a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.coinflipContent {
+    padding: 15px 1px 1px 1px;
+}
+
+.coinflipContent .completedDate {
+    color: grey;
+    text-align: right;
+}
+
+.coinflipContent .CreatorInfo {
+    border-radius: 5px;
+    background-color: #E0393A;
+    padding: 5px;
+}
+
+.coinflipContent .CreatorInfo p {
+    font-size: 22px;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.coinflipContent .CreatorInfo .total {
+    width: 32%;
+    text-align: center;
+    padding: 1px;
+}
+
+.coinflipContent .CreatorInfo .totalItems {
+    width: 33%;
+    text-align: center;
+    padding: 1px;
+}
+
+.coinflipContent .CreatorInfo .chance {
+    width: 32%;
+    text-align: center;
+    padding: 1px;
+}
+
+/*asdfasdf*/
+
+.coinflipContent .OppoentInfo {
+    border-radius: 5px;
+    background-color: #E0393A;
+    padding: 5px;
+}
+
+.coinflipContent .OppoentInfo p {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.coinflipContent .OppoentInfo .total {
+    width: 32%;
+    text-align: center;
+    padding: 1px;
+}
+
+.coinflipContent .OppoentInfo .totalItems {
+    width: 33%;
+    text-align: center;
+    padding: 1px;
+}
+
+.coinflipContent .OppoentInfo .chance {
+    width: 32%;
+    text-align: center;
+    padding: 1px;
+}
+
+.coinflipContent .hashInfo {
+    margin-top: 75px;
+}
+
+.coinflipContent .hashInfo p {
+    margin-bottom: 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+.coinflipContent .CreatorItems,
+.coinflipContent .OppoentItems {
+    margin-top: 20px;
+    /* center a div insie another div*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.coinflipContent .coinflipItem {
+    background-color: #404040;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #333333;
+    margin: 2px;
+}
+
+.coinflipContent .coinflipItem img {
+    width: 62px;
+    height: 62px;
+}
+
+.coinflipContent .coinflipItem p {
+    margin-bottom: 0px;
+}
+
+#CfDeposit .cfSelectCoin .cfCoins img {
+    width: 128px;
+    height: 128px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+#CfDeposit .cfSelectCoin .cfCoins .selected {
+    border: 2px solid #3797b4;
+    border-radius: 150px;
+}
+
+#CfDeposit .cfSelectCoin h3 {
+    text-align: center;
+    display: block;
+    color: #000;
+    margin-top: 0px;
+}
+
+#CfDeposit .cfSelectCoin .cfCoins {
+    /* center a div insie another div*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#CfDeposit .cfNeeds h4 {
+    color: #000;
+    text-align: center;
+}
+
+.coinflipHeader .flip-container {
+    position: absolute;
+    /*perspective: 1000;*/
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    /* flip the pane when hovered */
+    /* flip speed goes here */
+    /*.flipper*/
+}
+
+/*.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(1620deg);
+}*/
+
+/*$('.flipper').css('transform','rotateY(1620deg)')*/
+
+.flip-container,
+.flip-container .black,
+.flip-container .red {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-container .flipper {
+    transition: 3s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flip-container .flipper .black,
+.flip-container .flipper .red {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.flip-container .flipper .black {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+.flip-container .flipper .red {
+    transform: rotateY(180deg);
+}
+
+.flip-container .black img,
+.flip-container .red img {
+    height: 150px;
+    width: 150px;
+}
+
+#fliper-coin {
+    height: 200px !important;
+}
+
+#fliper-coin p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30%;
+}
+
+#biggestWinner-body:hover {
+    cursor: pointer;
+}
+
+#AcceptWinningsBody h6 {
+    color: grey;
+    margin-bottom: 0px;
+}
+
+#myHistory {
+    text-align: center;
+    color: #000;
+    border: 1px solid #000;
+}
+
+#myHistory tr th {
+    background-color: #a43636;
+    text-align: center;
+}
+
+#myHistory tr td {
+    background-color: #EA9999;
+    text-align: center;
+}
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 1px solid #000;
+}
+
+#myHistory tr:hover {
+    cursor: pointer;
+}
+
+#myHistory tr:nth-child(even) {
+    background-color: #c98282 !important;
+}
+
+#myHistory td img {
+    width: 25px;
+    height: 25px;
+}
+
+.blueText {
+    color: #337ab7 !important;
+}
+
+.blueText:hover {
+    color: #23527c !important;
+    text-decoration: underline;
+}
+
+.modal {
+    overflow: scroll !important;
+}
+
+#cfHistory {
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    height: 28px;
+}
+
+#cfHistoryText {
+    color: grey;
+    font-size: 15px;
+}
+
+#cfHistoryCoins {
+    display: inline;
+    overflow: hidden;
+}
+
+#cfHistoryCoins .cfHistoryCoin {
+    width: 25px;
+    padding: 0px 1px;
+    cursor: pointer;
+    height: 25px;
+}
+
+#togglecf-history {
+    position: absolute;
+    /* left: 5px; */
+    right: 5px;
+    top: 10px;
+    font-size: 18px;
+    color: #000;
+    padding-right: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+#AcceptWinningsBody {
+    text-align: center;
+}
+
+/*Double down!*/
+
+.DDOption {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.DDOption p {
+    margin: 0px;
+    font-size: 30px;
+}
+
+.DDOption:hover {
+    cursor: pointer;
+}
+
+#DDCancel {
+    background-color: #ccc;
+}
+
+#DDNow {
+    background-color: #c94646;
+}
+
+.cfSelectCoin .cfCoins img {
+    width: 128px;
+    height: 128px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+.cfSelectCoin .cfCoins .selected {
+    border: 2px solid #3797b4;
+    border-radius: 150px;
+}
+
+#fgStartingSoon {
+    text-align: center;
+}
+
+#fgStartingSoon h2 {
+    margin: 0px;
+}
+
+#fgStartingSoon p {
+    font-size: 16px;
+    margin: 0px;
+}
+
+#fgHistoryBody {
+    background-color: #191919 !important;
+    color: #fff;
+    text-align: center;
+}
+
+#fgHistoryWinner img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #c94646;
+    margin-right: 10px;
+}
+
+#fgHistoryWinner p {
+    display: inline;
+    margin: 0px;
+}
+
+#fgHistoryWinner p a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+#fgHistoryItems #fgHistoryItem {
+    color: #fff;
+    border: 2px solid #333333;
+    background-color: #404040;
+    font-weight: bold;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2px;
+    margin-top: 10px;
+}
+
+#fgHistoryItems #fgHistoryItem img {
+    height: 75px;
+    width: 75px;
+}
+
+#fgHistoryItems #fgHistoryItem p {
+    margin: 0px;
+    font-size: 16px;
+}
+
+#fgHistoryParticipant {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#fgHistoryParticipant p {
+    margin: 0px;
+    display: inline;
+}
+
+#fgHistoryParticipant a {
+    text-decoration: none;
+    color: #fff;
+    text-align: left !important;
+    font-size: 16px;
+}
+
+#fgHistoryParticipant img {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #c94646;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#fgHistoryGameInfo p {
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+#fgWinnerInfo {
+    text-align: center;
+}
+
+#fgWinnerInfo h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+#fgWinnerInfo p {
+    margin: 0px;
+    display: inline;
+    font-size: 18px;
+}
+
+#fgWinnerInfo img {
+    margin: 0px;
+    display: inline;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border: 3px solid #c94646;
+    margin-right: 10px;
+}
+
+#fgRollBox {
+    overflow: hidden;
+}
+
+#fgRollImgs {
+    overflow: visible;
+    width: 16000px !important;
+    position: relative;
+    float: left;
+    right: 15px;
+    -webkit-transition: right 6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: right 6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    height: 64px !important;
+    white-space: nowrap;
+    font-size: 0px;
+}
+
+#fgRollImgs img {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 1px solid grey;
+}
+
+.fgItems {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-align: center;
+}
+
+#fgItem {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #333333;
+    background-color: #404040;
+    font-weight: bold;
+    width: 65px;
+    height: 84px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2px;
+}
+
+#fgItem img {
+    height: 62px;
+    width: 62px;
+}
+
+.fgTimer,
+.fgPlayers {
+    text-align: center;
+    font-size: 16px;
+}
+
+.fgButton {
+    text-align: center;
+    background-color: #c94646;
+    border-radius: 5px;
+    width: 100%;
+    margin: auto;
+    margin-top: 5px;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fgButton a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.fgButton:hover {
+    cursor: pointer;
+}
+
+.fgButton p {
+    margin: 0px;
+}
+
+#fgWinnerInfo:hover {
+    cursor: pointer;
+}
+
+#notificationBody {
+    font-size: 18px;
+}
+
+.infoPanel {
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .verifyWraper {
+        display: block !important;
+    }
+
+    .verifyRequirement {
+        margin: 15px !important;
+    }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1195px) {
+    .verifyWraper {
+        display: block !important;
+    }
+
+    .verifyRequirement {
+        margin: 15px !important;
+    }
+}
+
+.verifyWraper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.verifyBlock {
+    flex-basis: 50%;
+    ;
+    width: 100%;
+}
+
+.verifyRequirement {
+    margin: 0px 15px;
+    padding: 15px;
+    background-color: #7289da;
+    font-weight: bold;
+    position: relative;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.verifyRequirement:hover,
+.verifyRequirement:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.verifyStepNum {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#Verify-Button {
+    width: 40%;
+    border-radius: 5px;
+    background-color: #c94646;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    padding: 5px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/*Flash Giveaway Winning Options*/
+
+#fgWinningItem {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #333333;
+    background-color: #404040;
+    font-weight: bold;
+    width: 90px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2px;
+}
+
+#fgWinningItem p {
+    margin: 0px;
+}
+
+#fgWinningItem img {
+    height: 85px;
+    width: 85px;
+}
+
+.fgOption {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #c94646;
+}
+
+.fgOption p {
+    margin: 0px;
+    font-size: 25px;
+}
+
+.fgOption:hover {
+    cursor: pointer;
+}
+
+#fgOptionsNow:hover {
+    cursor: pointer;
+}
+
+#fgOptionsFinal button {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#fgOptionsConfirm {
+    background-color: #c94646;
+}
+
+#fgOptionsCancel {
+    background-color: #707070;
+}
+
+.customAnnounce {
+    float: left;
+    display: inline;
+    border-radius: 2px;
+}
+
+.customAnnounce img {
+    height: 34px;
+}
+
+@media screen and (max-width: 400px) {
+    .customAnnounce {
+        float: none;
+        display: block;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    #JackpotDeposit .modal-footer,
+    #CfDeposit .modal-footer {
+        text-align: center;
+    }
+}
+
+.greyText {
+    color: grey !important;
+}
+
+.VerificationPiece {
+    font-size: 12px;
+}
+
+.VerificationPiece .VerificationLabel {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.preWrap {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+}
+
+.jimmyJoinInfo {
+    text-align: center;
+}
+
+.callJimmyButton {
+    border-radius: 5px;
+    background-color: #E0393A;
+    padding: 8px 20px;
+    display: inline-flex;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.jimmyDesc {
+    margin-top: 5px;
+    font-size: 12px;
+    color: grey;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+    .coinflipHeader {
+        position: relative;
+    }
+
+    #fliper-coin {
+        position: absolute;
+        transform: translate(50%);
+        right: 50%;
+    }
+
+    .coinflipHeader .opponent .opponent-imgs .pick {
+        right: 30%;
+    }
+
+    .coinflipHeader .creator .creator-imgs .pick {
+        left: 30%;
+    }
+}
+
+#GrubBalanceNavText {
+    background-color: #383838;
+    padding: 5px;
+    font-weight: 600;
+    border-radius: 15%;
+    color: #40aa00;
+    border: 1px solid #282828;
+    user-select: none;
+    cursor: pointer;
+}
+
+#sounds-muted {
+    position: absolute;
+    left: 93%;
+    transform: translateX(-100%);
+    font-size: 18px;
+    color: #000;
+    padding-right: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+/* Gift cards */
+
+.gc-options {
+    margin-bottom: 10px;
+}
+
+.gc-options img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+#gcActivateInput {
+    text-align: center;
+}
+
+.gcButton {
+    margin: 10px auto;
+    width: 40%;
+    padding: 10px;
+    background-color: #383838;
+    font-weight: 600;
+    border-radius: 2%;
+    color: #40aa00;
+    border: 1px solid #282828;
+    user-select: none;
+    cursor: pointer;
+}
+
+#gcSuccess a {
+    text-decoration: none;
+    color: #40aa00;
+}
+
+#gcReset {
+    cursor: pointer;
+}
