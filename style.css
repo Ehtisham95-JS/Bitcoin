@@ -1,0 +1,343 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.deposit-n-withdrawal-container {
+    border:2px solid rgb(223, 223, 223);
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+.deposit-n-withdrawal-container .buttons {
+    width: 100%;
+    display: flex;
+}
+
+.deposit-n-withdrawal-container .buttons button {
+    width: 50%;
+    color:'rgb(226, 154, 21)';
+    border:1px solid rgb(220, 220, 220);
+    padding:10px;
+}
+.deposit-n-withdrawal-container .buttons button#deposit{
+    background-color: rgb(226, 154, 21);
+    color:white;
+}
+
+.deposit-n-withdrawal-container .buttons-related-contents {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section h2{
+    color:lightgray;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .qr-code-n-detail-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .qr-code-n-detail-section .deposit-text-content {
+    margin-top: 15px;
+}
+
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .qr-code-n-detail-section .deposit-text-content p{
+    margin-bottom: 15px;
+}
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .qr-code-n-detail-section .deposit-text-content a{
+    color:black;
+}
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .qr-code-n-detail-section .deposit-text-content .deposit-important-text{
+    color:orange;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .qr-code-n-detail-section .deposit-text-content .deposit-important-text span{
+    color:black;
+    font-style:normal;
+    font-weight: bold;
+}
+
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .choose-file {
+    margin-top: 30px;
+    display: flex;
+}
+
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .choose-file input{
+    width: 30%;
+    padding:5px;
+    border: 1px solid gray;
+    outline:none;
+}
+
+.deposit-n-withdrawal-container .buttons-related-contents .deposit-section .choose-file button{
+    background-color: rgb(0, 115, 255);
+    color:white;
+    padding:5px 10px;
+    border:none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+
+
+/* Withdrawl Section */
+
+
+
+.withdrawal-section .some-text {
+    margin: auto;
+    width: fit-content;
+    padding:10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section .bitcoin-address {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section .bitcoin-address label{
+    background-color: rgb(108, 108, 108);
+    color:white;
+    padding:5px 10px;
+    font-size: 14px;
+    border-radius: 5px 0 0 5px;
+}
+
+.withdrawal-section .bitcoin-address input{
+    width: 400px;
+    border: 2px solid rgb(220, 220, 220);
+    outline:none;
+    border-left: none;
+    padding:5px 5px;
+}
+
+
+.withdrawal-section .bitcoin-amount {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section .bitcoin-amount label{
+    background-color: rgb(108, 108, 108);
+    color:white;
+    padding:5px 10px;
+    font-size: 14px;
+    border-radius: 5px 0 0 5px;
+}
+
+.withdrawal-section .bitcoin-amount input{
+    width: 400px;
+    border: 2px solid rgb(220, 220, 220);
+    outline:none;
+    border-left: none;
+    padding:5px 5px;
+}
+
+.withdrawal-section .bitcoin-amount .bits-input {
+    background-color: rgb(227, 156, 23);
+    color:black;
+    font-weight: bold;
+    padding:5px;
+    border: none;
+    margin-right: 10px;
+    box-shadow: 0px 8px 24px rgba(0 0 0 / 10%);
+    cursor: pointer;
+}
+
+.withdrawal-section .bitcoin-amount .bit-input-max {
+    padding:5px 10px;
+    background-color: rgb(255, 110, 110);
+    color:white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.withdrawal-section .terms-n-condition {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section .withdrawals-important-text {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section .withdrawals-important-text p{
+    color:orange;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.withdrawal-section .withdrawals-important-text p span{
+    color:black;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.withdrawal-section .withdrawal-overview {
+    background-color: rgb(223, 223, 223);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+    padding:20px 30px;
+    border-radius: 10px;
+}
+
+.withdrawal-section .withdrawal-overview div{
+    display: flex;
+    gap:30px;
+    /* justify-content: space-between; */
+    margin-bottom: 10px;
+}
+
+.withdrawal-section .withdrawal-overview div p{
+    font-size: 15px;
+}
+
+.withdrawal-section .withdrawal-overview div p.overview-title{
+    width: 200px;
+    word-wrap: break-word;
+}
+
+.withdrawal-section .withdraw-submit-btn{
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.withdrawal-section .withdraw-submit-btn button{
+    padding:10px 20px;
+    border:none;
+    background-color: rgb(58, 213, 58);
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.withdrawal-section .some-important-note {
+    color:orange;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section .tip-text {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section .tip-text p{
+    color:orange;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.withdrawal-section .withdraw-history {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.withdrawal-section .withdraw-history button{
+    padding:10px;
+    border:none;
+    background-color: rgb(58, 58, 58);
+    color:white;
+    cursor: pointer;
+}
+
+
+/* Responsiveness */
+
+@media screen and (max-width:768px) {
+
+    /* Deposit Section */
+    .deposit-n-withdrawal-container .buttons-related-contents .deposit-section h2{
+        width: fit-content;
+        margin: auto;
+    }
+    .deposit-n-withdrawal-container .buttons-related-contents {
+        margin: 0px 10px;
+    }
+    .deposit-n-withdrawal-container .buttons-related-contents .deposit-section .qr-code-n-detail-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .deposit-n-withdrawal-container .buttons-related-contents .deposit-section .qr-code-n-detail-section .deposit-text-content {
+        text-align: center;
+    }
+
+    .deposit-n-withdrawal-container .buttons-related-contents .deposit-section .choose-file input{
+        width: 30%;
+        padding:5px;
+        border: 1px solid gray;
+        outline:none;
+    }
+
+
+    .deposit-n-withdrawal-container .buttons-related-contents .deposit-section .choose-file {
+      width: fit-content;
+      margin: auto;
+    }
+
+    .deposit-n-withdrawal-container .buttons-related-contents .deposit-section .choose-file input{
+        width: 80%;
+    }
+
+
+    /* Withdrawal Section */
+
+    .withdrawal-section .bitcoin-address input{
+        width: 100%;
+    }
+
+    .withdrawal-section .bitcoin-amount input{
+        width: 100%;
+        border: 2px solid rgb(220, 220, 220);
+        outline:none;
+        border-left: none;
+        padding:5px 5px;
+    }
+
+    .withdrawal-section .withdrawal-overview div{
+        display: flex;
+        gap:10px;
+        /* justify-content: space-between; */
+        margin-bottom: 10px;
+    }
+    .withdrawal-section .withdrawal-overview {
+        background-color: rgb(223, 223, 223);
+        width: fit-content;
+        margin: auto;
+        margin-bottom: 20px;
+        padding:20px 10px;
+        border-radius: 10px;
+    }
+
+    .withdrawal-section .withdrawal-overview div p.overview-title{
+        width: 100px;
+        word-wrap:;
+    }
+}

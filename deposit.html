@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit | Withdrawals</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="deposit-n-withdrawal-container">
+        <div class="buttons">
+            <button id="deposit" >DEPOSITS</button>
+            <button id="withdrawals">Withdrawals</button>
+        </div>
+
+        <div class="buttons-related-contents">
+            <section class="deposit-section" >
+                <h2>Bitcoin deposit address</h2>
+                <div class="qr-code-n-detail-section">
+                    <div class="qr-code-img">
+                        <img src="http://qrcode.kaywa.com/img.php?s=20&d=Hello" alt="" width="200px">
+                    </div>
+                    <div class="deposit-text-content">
+                        <p class="deposit-important-text">Important: <span>Lorem ipsum dolor sit amet.</span></p>
+                        <a href="">Learn More</a>
+                        <p style="margin-top: 10px;">Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, eos. <span><a
+                                    href="">Learn More</a></span></p>
+
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span><a href="">Learn
+                                    More</a></span></p>
+                    </div>
+                </div>
+                <div class="choose-file">
+                    <!-- <input type="file"> -->
+                    <input type="text">
+                    <button><span><i class="fa-regular fa-file"></i></span> Copy</button>
+                </div>
+
+            </section>
+            <section class="withdrawal-section" style="display: none;">
+                <p class="some-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum assumenda
+                    explicabo quidem qui accusantium veritatis cumque, non architecto nulla eveniet.</p>
+
+                <div class="bitcoin-address">
+                    <label for="">Bitcoin Address</label>
+                    <input type="text">
+                </div>
+
+                <div class="bitcoin-amount">
+                    <label for="">Amount</label>
+                    <input type="text" placeholder="0">
+                    <button class="bits-input">bits</button>
+                    <button class="bit-input-max">Max</button>
+                </div>
+                <div class="terms-n-condition">
+                    <input type="checkbox" name="" id="">
+                    <label for="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, nulla!</label>
+                </div>
+
+                <div class="withdrawals-important-text">
+                    <p>Important: <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, eligendi!</span>
+                    </p>
+                </div>
+
+                <div class="withdrawal-overview">
+                    <div class="balance-available">
+                        <p class="overview-title">Balance Available for withdrawals</p>
+                        <p>0.28 bits</p>
+                    </div>
+
+                    <div class="amount-withdrawal">
+                        <p class="overview-title">Amount to withdraw</p>
+                        <p>0 bits</p>
+                    </div>
+
+                    <div class="withdraw-fee">
+                        <p class="overview-title">Withdraw Fee</p>
+                        <p>7.48 bits</p>
+                    </div>
+
+                    <div class="unpaid-deposit-fee">
+                        <p class="overview-title">Unpaid Deposit Fee <span style="color:rgb(206, 134, 0)">What is
+                                this?</span></p>
+                        <p>0.92 bits (1 x 0.92 bits)</p>
+                    </div>
+
+                    <div class="immediate-withdrawal-fee">
+                        <p class="overview-title">Immediate Withdrawal Fee</p>
+                        <p>31.56 bits</p>
+                    </div>
+
+                    <div class="total-balance-available">
+                        <p class="overview-title">Total</p>
+                        <p style="color:rgb(248, 126, 126)">39.96 bits</p>
+                    </div>
+                </div>
+
+                <div class="withdraw-submit-btn">
+                    <button>Submit</button>
+                </div>
+
+                <div class="some-important-note">
+                    <p>Important: <span style="color:black;
+                        font-style: normal;
+                        font-weight: normal;">Lorem ipsum dolor sit amet.</span> <span style="color:rgb(254, 113, 113);
+                        font-style: normal;
+                        font-weight: normal;">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Ea, odit.</span> <span style="color:black;
+                            font-style: normal;
+                            font-weight: normal;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.</span></p>
+                </div>
+
+                <div class="tip-text">
+                    <p>Tip: <span style=" color:black;
+                        font-style: normal;
+                        font-weight: normal;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, nulla.</span></p>
+                </div>
+
+                <div class="withdraw-history">
+                    <button>History</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+
+        const depositBtn = document.getElementById('deposit') 
+        const withdrawBtn = document.getElementById('withdrawals');
+        const withdrawSection = document.querySelector('.withdrawal-section');
+        const depositSection = document.querySelector('.deposit-section')
+        console.log();
+
+        withdrawBtn.addEventListener('click', () => {
+            depositBtn.style.backgroundColor = 'white';
+            depositBtn.style.color = 'rgb(226, 154, 21)';
+            withdrawBtn.style.backgroundColor = 'rgb(226, 154, 21)';
+            withdrawBtn.style.color = 'white';
+            withdrawSection.style.display = 'block';
+            depositSection.style.display = 'none';
+        })
+
+        depositBtn.addEventListener('click', () => {
+            withdrawBtn.style.backgroundColor = 'white';
+            withdrawBtn.style.color = 'rgb(226, 154, 21)';
+            depositBtn.style.backgroundColor = 'rgb(226, 154, 21)';
+            depositBtn.style.color = 'white';
+            withdrawSection.style.display = 'none';
+            depositSection.style.display = 'block';
+        })
+
+    </script>
+
+</body>
+
+</html>
