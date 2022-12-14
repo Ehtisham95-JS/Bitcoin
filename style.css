@@ -24,6 +24,7 @@
     color:'rgb(226, 154, 21)';
     border:1px solid rgb(220, 220, 220);
     padding:10px;
+    cursor: pointer;
 }
 .deposit-n-withdrawal-container .buttons button#deposit{
     background-color: rgb(226, 154, 21);
@@ -275,6 +276,7 @@
     .deposit-n-withdrawal-container .buttons-related-contents .deposit-section h2{
         width: fit-content;
         margin: auto;
+        margin-top: 20px;
     }
     .deposit-n-withdrawal-container .buttons-related-contents {
         margin: 0px 10px;
@@ -339,4 +341,125 @@
     .withdrawal-section .withdrawal-overview div p.overview-title{
         width: 100px;
     }
+}
+
+
+
+/* ***************** User Dashboard Style ************** */
+
+.user-dashboard-container {
+    margin: 20px;
+}
+
+
+/* <!-- User Header --> */
+
+.user-dashboard-container .user-dashboard-header {
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    margin-bottom: 10px;
+}
+
+.user-dashboard-container .user-dashboard-header .user-icon-n-name p {
+    font-size:24px;
+    font-weight: bold;
+    color:rgb(134, 134, 134);
+}
+
+.user-dashboard-container .user-dashboard-header .user-joined p{
+    font-size:20px;
+}
+
+.user-dashboard-container .user-dashboard-header .user-joined p span{
+    font-size:17px;
+}
+
+/* <!-- User Dashboard Btn --> */
+
+
+.user-dashboard-container .user-control-btn {
+    padding:20px 10px;
+    display: flex;
+    justify-content: space-around;
+    gap:10px;
+    border-bottom:3px solid rgb(197, 197, 197);
+    margin-bottom: 20px;
+}
+
+.user-dashboard-container .user-control-btn button{
+    width: 100px;
+    padding:5px 0;
+    color:white;
+    border:none;
+    cursor: pointer;
+}
+
+
+/* <!-- Performance Section --> */
+
+.user-dashboard-container .performance-section {
+    padding:10px;
+    margin-bottom: 10px;
+}
+
+.user-dashboard-container .performance-section h3{
+    color:rgb(134, 134, 134);
+    margin-bottom: 10px;
+}
+
+.user-dashboard-container .performance-section .performance-detail {
+    width: 50%;
+    margin: auto;
+}
+
+.user-dashboard-container .performance-section .performance-detail div{
+    display: flex;
+    gap:30px;
+    justify-content: space-between;
+    padding:5px 0;
+}
+
+.user-dashboard-container .performance-section .performance-detail div p{
+    color:rgb(134, 134, 134);
+}
+
+/* <!-- Hint --> */
+
+.user-dashboard-container .hint-area {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.user-dashboard-container .hint-area p{
+    color:orange;
+    font-style: italic;
+}
+
+
+/* User Dashboard Responsiveness(Media Query) */
+
+@media screen and (max-width:600px) {
+
+    .user-dashboard-container .user-dashboard-header .user-icon-n-name p {
+        font-size:20px;
+    }
+
+    .user-dashboard-container .user-dashboard-header .user-joined p{
+        font-size:15px;
+    }
+    .user-dashboard-container .user-dashboard-header .user-joined p span{
+        font-size:10px;
+    }
+    .user-dashboard-container .performance-section .performance-detail {
+        width: 100%;
+    }
+
+    .user-dashboard-container .performance-section .performance-detail div{
+       
+        gap:10px;
+        
+    }   
 }

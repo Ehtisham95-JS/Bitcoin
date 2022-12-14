@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+
+<body>
+    <div class="user-dashboard-container">
+        <!-- User Header -->
+        <div class="user-dashboard-header">
+
+            <div class="user-icon-n-name">
+                <div class="user-name">
+                    <p><span><i class="fa-solid fa-user"></i></span> res224</p>
+                </div>
+            </div>
+
+            <div class="user-joined">
+                <p>JOINED: <span>Tue March 09 2022</span><span>(1 Year ago)</span></p>
+            </div>
+
+        </div>
+
+        <!-- User Dashboard Btn -->
+
+        <div class="user-control-btn">
+            <button style="background-color: rgb(42, 138, 255);"><span><i class="fa-solid fa-bitcoin-sign"></i></span> Tip</button>
+            <button style="background-color: black;"><span><i class="fa-solid fa-plus"></i></span> Add to friends</button>
+            <button style="background-color: red;"><span><i class="fa-solid fa-ban"></i></span> Block</button>
+        </div>
+
+
+        <!-- Performance Section -->
+
+        <div class="performance-section">
+            <h3>PERFORMANCE</h3>
+            <div class="performance-detail">
+
+                <div class="performance-detail-child">
+                    <p>Game Played:</p>
+                    <h4>23172</h4>
+                </div>
+
+                <div class="performance-detail-child" style="border-bottom: 2px solid rgb(197, 197, 197);">
+                    <p>Total Wagered:</p>
+                    <h4>39458093 bits</h4>
+                </div>
+
+                <div class="performance-detail-child">
+                    <p>Net Profit:</p>
+                    <h4>23172939 bits</h4>
+                </div>
+
+                <div class="performance-detail-child">
+                    <p>Profit All Time High:</p>
+                    <h4>599992939499 bits</h4>
+                </div>
+
+                <div class="performance-detail-child">
+                    <p>Profit All Time Low:</p>
+                    <h4>-21378 bits</h4>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Hint -->
+
+        <div class="hint-area">
+            <p>Hint: <span style="color:black; font-style:normal;">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Perspiciatis, quam?</span></p>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart" style="display: flex; justify-content: center;">
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+        </div>
+
+    </div>
+
+
+    <script>
+        var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+        new Chart("myChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [ {
+                    data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                    borderColor: "green",
+                    fill: false
+                },]
+            },
+            options: {
+                legend: { display: false }
+            }
+        });
+    </script>
+</body>
+
+</html>
